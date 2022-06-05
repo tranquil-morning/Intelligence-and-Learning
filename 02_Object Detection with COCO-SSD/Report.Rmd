@@ -1,0 +1,73 @@
+---
+title: "Object Detection with COCO-SSD"
+author: "Jinwook Chang"
+date: '2022-06-05'
+output: 
+  html_document: 
+    highlight: pygments
+    theme: united
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Identify Problem
+
+On this Final Project, I made real time object detection web app using pre-trained model COCO-SSD.  
+The classes we had done so far, We focused on solving static problems.  
+
+Frankly Speaking, For me it is quite boring time to review others project, because I felt like I was just grading the test.  
+I decided to plan this project because I thought it would be less boring for people who are reviewing my project if they could participate in project.
+
+In conclusion, this is web-app that detect object through users web cam.  
+so I can idenfity this problem as multi class supervised learning problem in vision domain.
+
+
+## Data Collection
+
+I used pre-trained model for this project, so data collection is meaning of which pre-trained model should I use.  
+The options I had considered is 2 models, `YOLO` and `COCO-SSD`.  
+Summarize those two models as below :  
+
+#### COCO-SSD
+
+* Description
+
+    + This model detects objects defined in the COCO dataset, which is a large-scale object detection, segmentation, and captioning dataset.
+
+    + This model uses 80 categories from the COCO image dataset to detect objects. Note that there are some slight differences in category names for this model compared to those used for ml5’s YOLO implementation described above.
+
+#### YOLO
+
+* Description
+
+    + YOLO describes a type of neural network architecture used for computer vision and pattern recognition.
+
+    + This model uses 80 categories from the COCO image dataset to detect objects, indicating that it was likely trained on that dataset.
+
+    + It was also trained on images from the ImageNet database.
+
+
+## EDA
+
+I think EDA is not needed on this project. But when I compare 2 models YOLO and COCO-SSD,  
+YOLO seems more accurate but more slow when load model and COCO-SSD seems less accurate but more faster when load model.
+
+I considered this application is some kind of 'just for fun', so I choose COCO-SSD which is more faster.
+
+
+## Demo
+
+It takes time to load ML model when run Demo.
+Please be patient to see the results.
+
+[Video]()  
+[DEMO](https://tranquil-morning.github.io/Intelligence-and-Learning/02_Object%20Detection%20with%20COCO-SSD/)  
+[GitHub](https://github.com/tranquil-morning/Intelligence-and-Learning/tree/main/02_Object%20Detection%20with%20COCO-SSD)  
+
+## Reference
+
+[ml5.js Object Detector](https://learn.ml5js.org/#/reference/object-detector)
+
+
