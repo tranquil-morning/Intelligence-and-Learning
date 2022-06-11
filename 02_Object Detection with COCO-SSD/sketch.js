@@ -9,12 +9,12 @@ preload = () => {
 gotDetections = (err, results) => {
   if (err) {
     console.log(err);
-  } else {
+  }
     detections = results;
     detector.detect(video,gotDetections);
 
       
-    }
+
   };
 
 setup = () => {
